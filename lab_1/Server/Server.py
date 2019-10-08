@@ -15,9 +15,12 @@ def server_run():
     art=[]
     for article in top['articles']:
         art.extend(article.values())
+    return render_template('news.html', url = url3, date = now, articles = art)
 
-    return render_template('news.html', url = url3 , date = now, articles = art)
-
+@app.route('/<cmd>')
+def refresh():
+    if cmd == "Refresh Page":
+        server_run()
 
 if __name__ == '__main__':
     app.run(host='localhost', port=9090)
