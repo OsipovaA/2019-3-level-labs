@@ -1,5 +1,4 @@
-from Lab1.Finder import get_html_page, find_articles, publish_report
-
+from lab_1.HTML_crawler.html_crawler import get_html_page, find_articles, publish_report
 url3="https://stopgame.ru/news"
 resp3 = get_html_page(url3)
 top = find_articles(url3)
