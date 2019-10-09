@@ -1,4 +1,4 @@
-from Lab1.Finder import get_html_page, find_articles, publish_report
+from lab_1.Crawler.Finder import get_html_page, find_articles, publish_report
 import datetime
 import requests
 from flask import Flask, render_template
