@@ -12,6 +12,6 @@ cache:
 # command to run tests
 script:
   - python -m unittest discover 
-  - python lab_1/Tests/test_1.py
-  - python lab_1/Tests/test_2.py
-  - python lab_1/Tests/test_3.py
+  #- python lab_1/Tests/test_1.py
+  #- python lab_1/Tests/test_2.py
+  #- python lab_1/Tests/test_3.py
