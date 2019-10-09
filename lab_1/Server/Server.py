@@ -23,6 +23,7 @@ def server_run():
             art_list = list(jdata["articles"][i].values())
             art.extend(art_list)
             i += 1
+        outfile.close()    
     return render_template('news.html', url=url3, date=now, articles=art)
 
 
