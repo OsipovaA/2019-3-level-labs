@@ -1,5 +1,7 @@
 from lab_1.Crawler.Finder import find_articles, publish_report
 import datetime
+import codecs
+import json
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -11,9 +13,16 @@ def server_run():
     now = datetime.datetime.now()
     top = find_articles(url3)
     publish_report(top)
-    art = []
-    for article in top['articles']:
-        art.extend(article.values())
+    with codecs.open("StopGame.json", "r", encoding="utf-8") as outfile:
+        jdata = json.load(outfile)
+        eds = list(jdata.values())
+        list_len = len(eds[2])
+        art = []
+        i = 0
+        while i < list_len:
+            art_list = list(jdata["articles"][i].values())
+            art.extend(art_list)
+            i += 1
     return render_template('news.html', url=url3, date=now, articles=art)
 
 
