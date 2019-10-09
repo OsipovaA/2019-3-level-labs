@@ -5,7 +5,7 @@ import codecs
 class First_test(unittest.TestCase):
 
     def test_url(self):
-        with codecs.open("StopGame.json", "r", encoding="utf-8") as json_data:
+        with codecs.open("../Tests/StopGame.json", "r", encoding="utf-8") as json_data:
             jdata = json.load(json_data)
             eds = list(jdata.keys())
             ed = eds[0]
