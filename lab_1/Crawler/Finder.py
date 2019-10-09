@@ -3,11 +3,13 @@ from bs4 import BeautifulSoup
 import json
 import codecs
 import datetime
-from flask import Flask, render_template
+
 
 def get_html_page(url):
     resp = requests.get(url)
     return resp
+
+
 def find_articles(url):
     topics = {}
     now = datetime.datetime.now()
@@ -23,6 +25,8 @@ def find_articles(url):
     else:
         print("All for now")
     return topics
+
+
 def publish_report(topics):
     with codecs.open("StopGame.json", "w", encoding="utf-8") as outfile:
         json.dump(topics, outfile, indent=4, ensure_ascii=False, separators=(',', ': '))
