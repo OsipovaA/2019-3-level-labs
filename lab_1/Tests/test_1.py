@@ -13,7 +13,7 @@ class First_test(unittest.TestCase):
         json_data.close()
 
     def test_data(self):
-        with codecs.open("StopGame.json", "r", encoding="utf-8") as json_data:
+        with codecs.open("../Tests/StopGame.json", "r", encoding="utf-8") as json_data:
             jdata = json.load(json_data)
             eds = list(jdata.keys())
             ed = eds[1]
@@ -21,7 +21,7 @@ class First_test(unittest.TestCase):
         json_data.close()
 
     def test_articles(self):
-        with codecs.open("StopGame.json", "r", encoding="utf-8") as json_data:
+        with codecs.open("../Tests/StopGame.json", "r", encoding="utf-8") as json_data:
             jdata = json.load(json_data)
             eds = list(jdata.keys())
             ed = eds[2]
@@ -29,7 +29,7 @@ class First_test(unittest.TestCase):
         json_data.close()
 
     def test_titles(self):
-        with codecs.open("StopGame.json", "r", encoding="utf-8") as json_data:
+        with codecs.open("../Tests/StopGame.json", "r", encoding="utf-8") as json_data:
             jdata = json.load(json_data)
             eds = list(jdata.values())
             list_len = len(eds[2])
