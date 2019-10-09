@@ -7,6 +7,8 @@ install:
 # command to run tests
 script:
   - cd lab_1
+  - dir
+  - cd Tests
   - python -m unittest discover 
   - python lab_1/Tests/1_test.py
   - python lab_1/Tests/2_test.py
