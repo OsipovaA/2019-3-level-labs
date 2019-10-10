@@ -10,13 +10,12 @@ def get_html_page(url):
     return resp
 
 
-def find_articles(url):
+def find_articles(url,resp):
     topics = {}
     now = datetime.datetime.now()
     topics["url"] = url
     topics["creationDate"] = str(now)
     topics["articles"] = []
-    resp = requests.get(url)
     if resp.status_code == 200:
         soup3 = BeautifulSoup(resp.text, 'html.parser')
         l3 = soup3.find("div", {"class": "lent-left"})
