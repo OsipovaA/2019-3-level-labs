@@ -15,8 +15,8 @@ def server_run():
     publish_report(top)
     with codecs.open("StopGame.json", "r", encoding="utf-8") as outfile:
         jdata = json.load(outfile)
-        eds = list(jdata.values())
-        list_len = len(eds[2])
+        eds=jdata['articles']
+        list_len = len(eds)
         art = []
         i = 0
         while i < list_len:
