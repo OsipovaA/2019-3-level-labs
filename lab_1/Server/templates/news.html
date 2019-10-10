@@ -4,14 +4,25 @@
 <meta charset="UTF-8">
 <title>StopGame</title>
 </head>
-<body>
-<h1>Новости</h1><button value="Refresh Page" onClick="window.location.reload();">Refresh</button>
-<ul>
+ 
+<body style="background-color:#66cc66">
+<p align="left" >
+    <img src="https://im0-tub-ru.yandex.net/i?id=13457bafeccc30e87e22ee0bbd74b6c4-l&n=13" hspace="25" vspace="7" alt="StopGame" width="125" height="100" border="0" /></p>
+<DIV style="TEXT-ALIGN: center; color=#ffffff"><h1>Новости</h1></DIV>
+<DIV style="TEXT-ALIGN: left; color=#ffffff"> <button value="Refresh Page" onClick="window.location.reload();">Refresh</button></DIV>
+<ul></ul>
+  
+<ul><big>
 {% for article in articles %}
 <li>{{ article }}</li>
 {% endfor %}
-</ul>  
-<p><b>Источник:</b> {{ url }}</p>
-<p><b>Дата:</b> {{ date }}</p>  
+</big></ul>
+
+<li></li>
+<li></li>
+<DIV style="TEXT-ALIGN: left; color=#8BD378"><p><b>Источник:</b> <ins>{{ url }}</ins></p></DIV>
+<li></li>
+<DIV style="TEXT-ALIGN: right; color=#ffffff"><p><b>Дата:</b> {{ date }}</p></DIV>
+  
 </body>
 </html>
