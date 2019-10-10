@@ -9,7 +9,8 @@ class First_test(unittest.TestCase):
             jdata = json.load(json_data)
             eds = list(jdata.keys())
             ed = eds[0]
-            self.assertEqual(ed, 'url')
+
+            self.assertEqual(str(ed), 'url')
         json_data.close()
 
     def test_data(self):
@@ -17,7 +18,7 @@ class First_test(unittest.TestCase):
             jdata = json.load(json_data)
             eds = list(jdata.keys())
             ed = eds[1]
-            self.assertEqual(ed, 'creationDate')
+            self.assertEqual(str(ed), 'creationDate')
         json_data.close()
 
     def test_articles(self):
@@ -25,7 +26,7 @@ class First_test(unittest.TestCase):
             jdata = json.load(json_data)
             eds = list(jdata.keys())
             ed = eds[2]
-            self.assertEqual(ed, 'articles')
+            self.assertEqual(str(ed), 'articles')
         json_data.close()
 
     def test_titles(self):
@@ -37,7 +38,7 @@ class First_test(unittest.TestCase):
             while i < list_len:
                 art_list = list(jdata["articles"][i].keys())
                 art_single = art_list[0]
-                self.assertEqual(art_single, 'Title')
+                self.assertEqual(str(art_single), 'Title')
                 i += 1
         json_data.close()
 
