@@ -13,8 +13,8 @@ def get_html_page(url):
 def find_articles(url):
     topics = {}
     now = datetime.datetime.now()
-    topics["url"] = [url]
-    topics["creationDate"] = [str(now)]
+    topics["url"] = url
+    topics["creationDate"] = str(now)
     topics["articles"] = []
     resp = requests.get(url)
     if resp.status_code == 200:
