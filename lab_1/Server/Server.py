@@ -15,6 +15,8 @@ def server_run():
     publish_report(top)
     with codecs.open("StopGame.json", "r", encoding="utf-8") as outfile:
         jdata = json.load(outfile)
+        urls=jdata['url']
+        now_time=jdata['creationDate']
         eds=jdata['articles']
         list_len = len(eds)
         art = []
@@ -24,7 +26,7 @@ def server_run():
             art.extend(art_list)
             i += 1
         outfile.close()
-    return render_template('news.html', url=url3, date=now, articles=art)
+    return render_template('news.html', url=urls, date=now_time, articles=art)
 
 
 @app.route('/<cmd>')
