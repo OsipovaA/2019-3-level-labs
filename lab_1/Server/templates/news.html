@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>StopGame</title>
-</head>
- 
-<body style="background-color:#66cc66">
-<p align="left" >
-    <img src="https://im0-tub-ru.yandex.net/i?id=13457bafeccc30e87e22ee0bbd74b6c4-l&n=13" hspace="25" vspace="7" alt="StopGame" width="125" height="100" border="0" /></p>
-<DIV style="TEXT-ALIGN: center; color=#ffffff"><h1>Новости</h1></DIV>
-<DIV style="TEXT-ALIGN: left; color=#ffffff"> <button value="Refresh Page" onClick="window.location.reload();">Refresh</button></DIV>
+<DIV style="TEXT-ALIGN: left;
+color=#ffffff"> <button value="Refresh Page" onClick="window.location.reload();">Refresh</button></DIV>
 <ul></ul>
-  
+<head>
+<link rel="icon" href="data:;base64,=">
+</head>
 <ul><big>
-{% for article in articles %}
-<li>{{ article }}</li>
+
+{% for article in articles["articles"] %}
+{% for art in article.values() %}
+<li>{{ "(Авторы: Осипова, Квасников): "}}{{ art}}</li>
+{% endfor %}
 {% endfor %}
 </big></ul>
 
 <li></li>
 <li></li>
-<DIV style="TEXT-ALIGN: left; color=#8BD378"><p><b>Источник:</b> <ins>{{ url }}</ins></p></DIV>
+<DIV style="TEXT-ALIGN: left; color=#8BD378"><p><b>Источник:</b> <ins>{{ articles['url'] }}</ins></p></DIV>
 <li></li>
-<DIV style="TEXT-ALIGN: right; color=#ffffff"><p><b>Дата:</b> {{ date }}</p></DIV>
-  
+<DIV style="TEXT-ALIGN: right; color=#ffffff"><p><b>Дата:</b> {{ articles['creationDate'] }}</p></DIV>
+
 </body>
 </html>
