@@ -32,4 +32,4 @@ def favicon():
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=9090)
+    app.run(host='young-peak-10629.herokuapp.com', port=9090)
