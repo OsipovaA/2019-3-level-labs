@@ -1,4 +1,4 @@
-from Finder import find_articles, publish_report
+from lab_2.Finder import find_articles, publish_report
 import codecs
 import json
 import requests
