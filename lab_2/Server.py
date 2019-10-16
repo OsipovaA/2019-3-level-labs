@@ -1,4 +1,4 @@
-from lab_1.Crawler.Finder import find_articles, publish_report
+from Finder import find_articles, publish_report
 import codecs
 import json
 import requests
