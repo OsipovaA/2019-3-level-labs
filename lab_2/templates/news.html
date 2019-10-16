@@ -1,0 +1,24 @@
+<html></html>
+<DIV style="TEXT-ALIGN: left;
+color:#808080"> <button value="Refresh Page" onClick="window.location.reload();">Refresh</button></DIV>
+<ul></ul>
+<head>
+<link rel="icon" href="data:;base64,=">
+</head>
+<body bgcolor="#E6E6FA">
+<ul><big>
+
+{% for article in articles["articles"] %}
+{% for art in article.values() %}
+<li>{{ "(Авторы: Осипова, Квасников): "}}{{ art}}</li>
+{% endfor %}
+{% endfor %}
+</big>
+</ul>
+
+
+<DIV style="TEXT-ALIGN: left; color:#000000"><p><b>Источник:</b> <ins>{{ articles['url'] }}</ins></p></DIV>
+<DIV style="TEXT-ALIGN: right; color:#000000"><p><b>Дата:</b> {{ articles['creationDate'] }}</p></DIV>
+
+</body>
+</html>
