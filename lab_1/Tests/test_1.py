@@ -15,7 +15,7 @@ class First_test(unittest.TestCase):
         publish_report(top)
         with codecs.open("StopGame.json", "r", encoding="utf-8") as json_data:
             jdata = json.load(json_data)
-            self.assertEqual(jdata['url'][0], url3)
+            self.assertEqual(jdata['url'], url3)
             for article in jdata["articles"]:
                 for art in article.values():
                     self.assertTrue(art)
