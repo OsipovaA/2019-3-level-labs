@@ -10,7 +10,7 @@ color:#808080"> <button value="Refresh Page" onClick="window.location.reload();"
 
 {% for article in articles["articles"] %}
 {% for art in article.values() %}
-<li>{{ "(Авторы: Осипова, Квасников): "}}{{ art}}</li>
+<li>{{ art}}</li>
 {% endfor %}
 {% endfor %}
 </big>
