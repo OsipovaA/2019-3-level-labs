@@ -10,15 +10,15 @@ class First_test(unittest.TestCase):
 
     def test_url(self):
         url3 = "https://stopgame.ru/news"
-        resp3 = get_html_page(url3)#status
-        top = find_articles(url3, resp3)#Parcer
-        publish_report(top)#write json
-        with codecs.open("StopGame.json", "r", encoding="utf-8") as json_data:#open json
-            jdata = json.load(json_data)#load json
-            self.assertEqual(jdata['url'][0], url3)#url ink == url link(https://stopgame.ru/news" == https://stopgame.ru/news")
+        resp3 = get_html_page(url3)
+        top = find_articles(url3, resp3)
+        publish_report(top)
+        with codecs.open("StopGame.json", "r", encoding="utf-8") as json_data:
+            jdata = json.load(json_data)
+            self.assertEqual(jdata['url'][0], url3)
             for article in jdata["articles"]:
                 for art in article.values():
-                    self.assertTrue(art)#titles in son not empty
+                    self.assertTrue(art)
         json_data.close()
 
 
