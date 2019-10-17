@@ -2,6 +2,7 @@ from lab_1.Crawler.Finder import get_html_page, publish_report, find_articles
 import unittest
 import json
 import codecs
+import urllib
 
 '''Test file structure'''
 
@@ -9,7 +10,7 @@ import codecs
 class First_test(unittest.TestCase):
 
     def test_url(self):
-        url3 = "https://stopgame.ru/news"
+        url3 = urllib.urlretrieve("https://stopgame.ru/news", "test.txt")
         resp3 = get_html_page(url3)
         top = find_articles(url3, resp3)
         publish_report(top)
