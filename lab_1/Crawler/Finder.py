@@ -22,7 +22,6 @@ def find_articles(url,resp):
         l3 = soup3.find("div", {"class": "lent-left"})
         for i in l3.findAll("div", "title lent-title"):
             topics["articles"].append({"Title": i.text})
-            credits.append({"Авторы: ": "Осипова, Квасников})
     else:
         print("All for now")
     return topics
